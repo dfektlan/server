@@ -1,0 +1,110 @@
+
+!
+version 12.1
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname dfekt-example
+!
+enable secret 5 $1$um2D$SQvTiCi0NlC/TmlJv0guZ/
+enable password kradalby
+!
+ip subnet-zero
+!
+spanning-tree mode pvst
+no spanning-tree optimize bpdu transmission
+spanning-tree extend system-id
+!
+!
+interface FastEthernet0/1
+ no ip address
+!
+interface FastEthernet0/2
+ no ip address
+!
+interface FastEthernet0/3
+ no ip address
+!
+interface FastEthernet0/4
+ no ip address
+!
+interface FastEthernet0/5
+ no ip address
+!
+interface FastEthernet0/6
+ no ip address
+!
+interface FastEthernet0/7
+ no ip address
+!
+interface FastEthernet0/8
+ no ip address
+!
+interface FastEthernet0/9
+ no ip address
+!
+interface FastEthernet0/10
+ no ip address
+!
+interface FastEthernet0/11
+ no ip address
+!
+interface FastEthernet0/12
+ no ip address
+!
+interface FastEthernet0/13
+ no ip address
+!
+interface FastEthernet0/14
+ no ip address
+!
+interface FastEthernet0/15
+ no ip address
+!
+interface FastEthernet0/16
+ no ip address
+!
+interface FastEthernet0/17
+ no ip address
+!
+interface FastEthernet0/18
+ no ip address
+!
+interface FastEthernet0/19
+ no ip address
+!
+interface FastEthernet0/20
+ no ip address
+!
+interface FastEthernet0/21
+ no ip address
+!
+interface FastEthernet0/22
+ no ip address
+!
+interface FastEthernet0/23
+ no ip address
+!
+interface FastEthernet0/24
+ no ip address
+!
+interface Vlan1
+ ip address 192.168.66.5 255.255.255.0
+ no ip route-cache
+!
+ip default-gateway 192.168.66.1
+ip http server
+!
+snmp-server community public RO
+!
+line con 0
+line vty 0 4
+ password kradalby
+ login
+line vty 5 15
+ password kradalby
+ login
+!
+end
